@@ -15,7 +15,7 @@ $('form').checkem()
 Define select all checkboxes using attribute `data-checkem="all"`
 
 ```html
-<input type="checkbox" name="allitems" **data-checkem="all"**> Check All
+<input type="checkbox" name="allitems" data-checkem="all"> Check All
 ```
 
 
