@@ -1,6 +1,8 @@
 #jquery-checkem
 It simplifies the parent-child relationship and selects appropriate checkboxes.
 
+[DEMO](http://lancevo.github.io/jquery-checkem/)
+
 #usage
 
 ```js
