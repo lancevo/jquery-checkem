@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>checkEm</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="jquery-checkem.min.js"></script>
+  <style>
+    ul {
+      list-style: none;
+      padding-left:20px;
+      margin:0;
+    }
+
+    label {
+      display:block;
+      margin:5px 20px;
+    }
+    li li {
+      color:#999;
+    }
+    li li li {
+      color:#ccc;
+    }
+  </style>
+</head>
+<body>
+  <form>
+    <label><input type="checkbox" data-checkem="all"><strong> Check all</strong> </label>
+    <label><input type="checkbox"> Single Item</label><label><input type="checkbox" name="nest"> Nested Item</label>
+    <ul>
+      <li><label><input type="checkbox" data-checkem-parent="nest"> Child A </label></li>
+      <li><label><input type="checkbox" data-checkem-parent="nest"> Child B </label></li>
+      <li>
+        <label><input type="checkbox" name="childc" data-checkem-parent="nest"> Child C </label>
+        <ul>
+          <li><label><input type="checkbox" name="childc1" data-checkem-parent="childc"> Child C-1</label>
+            <ul>
+              <li><label><input type="checkbox" data-checkem-parent="childc1"> Child C-1-1</label></li>
+              <li><label><input type="checkbox" data-checkem-parent="childc1"> Child C-1-2</label></li>
+            </ul>
+          </li>
+          <li><label><input type="checkbox" name="childc2" data-checkem-parent="childc"> Child C-2</label></li>
+        </ul>
+      </li>
+    </ul>
+    <label><input type="checkbox"> Single Item</label>
+  </form>
+
+
+<script>
+  $(document).ready(function(){
+    $('form').checkem();
+  });
+</script>
+
+
+</body>
+</html>
