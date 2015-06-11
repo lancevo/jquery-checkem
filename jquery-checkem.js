@@ -3,7 +3,7 @@
  source: https://github.com/lancevo/jquery-checkem
  a jquery plug-in to simplify form's nested checkboxes
 
- Version: 0.1
+ Version: 0.2
  License: MIT
  */
 (function($){
