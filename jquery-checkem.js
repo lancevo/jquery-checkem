@@ -20,10 +20,10 @@
         childCheckboxCount = 0;
 
     (function generateTree(){
+      tree.checkall = tree.checkall || [];
       $.each(checkboxes, function(idx, checkbox){
         $cb = $(checkbox);
         if ($cb.attr('data-checkem')==='all') {
-          tree.checkall = tree.checkall || [];
           tree.checkall.push(checkbox);
         } else if (parentName = $cb.attr('data-checkem-parent')) {
           tree[parentName] = tree[parentName] || [];
